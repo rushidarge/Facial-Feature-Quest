@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Filtered Images</h1>
+    <div class="image-container">
+        {% for image_path in image_paths %}
+            <img src="{{ url_for('static', filename=image_path) }}" class="quiz-image">
+        {% endfor %}
+    </div>
+</body>
+</html>

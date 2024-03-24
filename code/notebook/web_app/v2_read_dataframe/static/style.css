@@ -5,3 +5,8 @@ img {
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
     margin: 10px; /* Add margin for spacing between images */
 }
+
+/* add cyan background */
+body {
+    background-color: #00FFFF;
+}
