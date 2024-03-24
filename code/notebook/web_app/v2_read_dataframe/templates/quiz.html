@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <!-- add style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div class="image-container">
+        {% for image in images %}
+            <img src="{{ url_for('static', filename=image) }}" alt="Image">
+        {% endfor %}
+    </div>
+</body>
+</html>

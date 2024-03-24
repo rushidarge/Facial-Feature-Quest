@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <style>
+        /* Add your CSS styles here */
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Headline Goes Here</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Image 1">
+            <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2">
+            <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image 3">
+        </div>
+        <button onclick="next()">Next!!!</button>
+    </div>
+    <script>
+        function next() {
+            // Add JavaScript logic for the next button here
+            alert('Next button clicked!');
+            // after that page will be redirected
+            window.location.href = '/select_option';
+        }
+    </script>
+</body>
+</html>

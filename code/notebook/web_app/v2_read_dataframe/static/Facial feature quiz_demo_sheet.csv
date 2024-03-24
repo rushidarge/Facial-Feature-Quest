@@ -1,0 +1,27 @@
+index,person name,person id,image name,type,gender,image path
+1,rushidarge,123,123#rushidarge#eye#1.jpg,eye,male,/person_database/male/parts/eye/123#rushidarge#eye#1.jpg
+2,rushidarge,123,123#rushidarge#eye#2.jpg,eye,male,/person_database/male/parts/eye/123#rushidarge#eye#2.jpg
+3,rushidarge,123,123#rushidarge#nose#1.jpg,nose,male,/person_database/male/parts/nose/123#rushidarge#nose#1.jpg
+4,rushidarge,123,123#rushidarge#lips#4.jpg,lips,male,/person_database/male/parts/lips/123#rushidarge#lips#4.jpg
+5,rushidarge,123,123#rushidarge#eye#3.jpg,eye,male,/person_database/male/parts/eye/123#rushidarge#eye#3.jpg
+6,deepikap,1234,1234#deepikap#eye#1.jpg,eye,female,/person_database/female/parts/eye/1234#deepikap#eye#1.jpg
+7,deepikap,1234,1234#deepikap#eye#2.jpg,eye,female,/person_database/female/parts/eye/1234#deepikap#eye#2.jpg
+8,deepikap,1234,1234#deepikap#eye#3.jpg,eye,female,/person_database/female/parts/eye/1234#deepikap#eye#3.jpg
+9,deepikap,1234,1234#deepikap#nose#3.jpg,nose,female,/person_database/female/parts/nose/1234#deepikap#nose#3.jpg
+10,deepikap,1234,1234#deepikap#lips#3.jpg,lips,female,/person_database/female/parts/lips/1234#deepikap#lips#3.jpg
+11,john,567,567#john#eye#1.jpg,eye,male,/person_database/male/parts/eye/567#john#eye#1.jpg
+12,john,567,567#john#nose#1.jpg,nose,male,/person_database/male/parts/nose/567#john#nose#1.jpg
+13,john,567,567#john#lips#1.jpg,lips,male,/person_database/male/parts/lips/567#john#lips#1.jpg
+14,emma,890,890#emma#eye#1.jpg,eye,female,/person_database/female/parts/eye/890#emma#eye#1.jpg
+15,emma,890,890#emma#nose#1.jpg,nose,female,/person_database/female/parts/nose/890#emma#nose#1.jpg
+16,emma,890,890#emma#lips#1.jpg,lips,female,/person_database/female/parts/lips/890#emma#lips#1.jpg
+17,john,567,567#john#eye#2.jpg,eye,male,/person_database/male/parts/eye/567#john#eye#2.jpg
+18,john,567,567#john#nose#2.jpg,nose,male,/person_database/male/parts/nose/567#john#nose#2.jpg
+19,john,567,567#john#lips#2.jpg,lips,male,/person_database/male/parts/lips/567#john#lips#2.jpg
+20,emma,890,890#emma#eye#2.jpg,eye,female,/person_database/female/parts/eye/890#emma#eye#2.jpg
+21,emma,890,890#emma#nose#2.jpg,nose,female,/person_database/female/parts/nose/890#emma#nose#2.jpg
+22,emma,890,890#emma#lips#2.jpg,lips,female,/person_database/female/parts/lips/890#emma#lips#2.jpg
+23,alex,111,111#alex#eye#1.jpg,eye,male,/person_database/male/parts/eye/111#alex#eye#1.jpg
+24,alex,111,111#alex#nose#1.jpg,nose,male,/person_database/male/parts/nose/111#alex#nose#1.jpg
+25,alex,111,111#alex#lips#1.jpg,lips,male,/person_database/male/parts/lips/111#alex#lips#1.jpg
+26,sophia,222,222#sophia#eye#1.jpg,eye,female,/person_database/female/parts/eye/222#sophia#eye#1.jpg

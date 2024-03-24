@@ -1,0 +1,7 @@
+/* make all images of size 200x200 */
+img {
+    width: 200px; /* Set width to 200px */
+    height: 200px; /* Set height to 200px */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    margin: 10px; /* Add margin for spacing between images */
+}
