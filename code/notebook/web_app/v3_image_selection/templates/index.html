@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <script>
+        function showQuestion(questionNumber) {
+            var questions = document.getElementsByClassName("question");
+            for (var i = 0; i < questions.length; i++) {
+                questions[i].style.display = "none";
+            }
+            document.getElementById("question" + questionNumber).style.display = "block";
+        }
+    </script>
+</head>
+<body onload="showQuestion(1)">
+    <h1>Multiple Choice Quiz</h1>
+    <form action="/submit" method="post">
+        {% for question_number, question_text in questions.items() %}
+            <div id="question{{ question_number }}" class="question" {% if question_number != 1 %} style="display: none;" {% endif %}>
+                <h3>{{ question_text }}</h3>
+                <input type="radio" name="answer{{ question_number }}" value="A"> Option A<br>
+                <input type="radio" name="answer{{ question_number }}" value="B"> Option B<br>
+                <input type="radio" name="answer{{ question_number }}" value="C"> Option C<br>
+                <input type="radio" name="answer{{ question_number }}" value="D"> Option D<br>
+            </div>
+        {% endfor %}
+        <input type="hidden" name="num_questions" value="{{ questions|length }}">
+        <input type="submit" value="Next">
+    </form>
+</body>
+</html>

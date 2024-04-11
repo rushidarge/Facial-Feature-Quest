@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Answers</title>
+</head>
+<body>
+    <h1>Quiz Answers</h1>
+    <ul>
+        {% for question, answer in answers.items() %}
+            <li>{{ question }} - {{ answer }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

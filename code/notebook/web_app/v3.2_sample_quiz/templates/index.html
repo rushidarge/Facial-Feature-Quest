@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Game</title>
+</head>
+<body>
+    <h1>Question {{ current_question + 1 }}</h1>  <p>{{ question['question'] }}</p>
+    <form method="POST" action="/answer">
+        {% for option in question['options'] %}
+            <input type="radio" name="answer" value="{{ option }}"> {{ option }}<br>
+        {% endfor %}
+        <br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

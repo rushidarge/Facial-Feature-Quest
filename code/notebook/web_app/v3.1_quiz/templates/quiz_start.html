@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Quiz</title>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <p>Please enter the number of questions you'd like to answer:</p>
+    <form action="/quiz" method="POST">
+        <label for="num_questions">Number of questions:</label>
+        <input type="number" id="num_questions" name="num_questions" min="1" max="10" required>
+        <button type="submit">Start Quiz</button>
+    </form>
+</body>
+</html>

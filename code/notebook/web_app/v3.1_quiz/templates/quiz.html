@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div id="question-container">
+        <form id="quiz-form" action="/submit_quiz" method="POST">
+            {% for question in questions %}
+                {% set outer_loop = loop %}
+                <div class="question" id="question{{ loop.index }}" {% if loop.index != 1 %} style="display: none;" {% endif %}>
+                    <h2>{{ question['question'] }}</h2>
+                    <input type="hidden" name="question{{ loop.index }}" id="question{{ loop.index }}" value="{{ question['correct_answer'] }}">
+                    {% for option in question['options'] %}
+                        <label>
+                            <input type="radio" name="answer{{ outer_loop.index }}" id="answer{{ loop.index }}" value="{{ option }}">
+                            {{ option }}
+                        </label><br>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button type="button" id="prev-btn" style="display: none;">Previous</button>
+            <button type="button" id="next-btn">Next</button>
+            <button type="submit" id="submit-btn" style="display: none;">Submit Quiz</button>
+        </form>
+    </div>
+    <script>
+
+    //         // JavaScript snippet for handling single selection of radio buttons
+    // document.querySelectorAll('input[type="radio"]').forEach(function(input) {
+    //     input.addEventListener('click', function() {
+    //         document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+    //             radio.disabled = true;
+    //         });
+    //         this.disabled = false;
+    //     });
+    // });
+
+        const questions = document.querySelectorAll('.question');
+        let currentQuestionIndex = 0;
+
+        // Add event listener to Next button
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                questions[currentQuestionIndex].style.display = 'none';
+                currentQuestionIndex++;
+                questions[currentQuestionIndex].style.display = 'block';
+            }
+            if (currentQuestionIndex === questions.length - 1) {
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('submit-btn').style.display = 'block';
+            }
+            if (currentQuestionIndex > 0) {
+                document.getElementById('prev-btn').style.display = 'block';
+            }
+        });
+
+        // Add event listener to Previous button
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                questions[currentQuestionIndex].style.display = 'none';
+                currentQuestionIndex--;
+                questions[currentQuestionIndex].style.display = 'block';
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                document.getElementById('next-btn').style.display = 'block';
+                document.getElementById('submit-btn').style.display = 'none';
+            }
+            if (currentQuestionIndex === 0) {
+                document.getElementById('prev-btn').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

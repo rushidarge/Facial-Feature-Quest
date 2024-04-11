@@ -1,0 +1,11 @@
+img_path,ground_truth,img_size
+/path/to/image1.jpg,cat,1024x768
+/path/to/image2.jpg,dog,800x600
+/path/to/image3.jpg,flower,1200x900
+/path/to/image4.jpg,tree,1600x1200
+/path/to/image5.jpg,car,1280x720
+/path/to/image6.jpg,sunset,1920x1080
+/path/to/image7.jpg,beach,1440x900
+/path/to/image8.jpg,mountain,2000x1500
+/path/to/image9.jpg,building,1024x768
+/path/to/image10.jpg,bird,800x600

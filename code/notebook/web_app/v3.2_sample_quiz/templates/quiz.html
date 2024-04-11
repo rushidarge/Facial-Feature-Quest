@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <form action="/quiz" method="post">
+        {% for index, question in enumerate(questions) %}
+            <h2>Question {{ index + 1 }}:</h2>
+            <p>{{ question.question }}</p>
+            {% for option in question.options %}
+                <input type="radio" id="q{{ index }}" name="{{ index }}" value="{{ option }}">
+                <label for="q{{ index }}">{{ option }}</label><br>
+            {% endfor %}
+            <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
